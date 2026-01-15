@@ -4,6 +4,7 @@ import useDebounce from "../hooks/useDebounce";
 import { useFeed } from "../context/FeedContext";
 import { fetchSuggestions } from "../api/unsplash";
 import { Link } from "react-router-dom";
+import { Bookmark } from 'lucide-react';
 
 const CATEGORIES = ["Nature", "AI", "Tech", "People", "Travel"];
 
@@ -76,7 +77,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to='/saved'>Saved Page</Link>
+          <Link to='/saved' className="flex items-end gap-2">Saved Page<Bookmark size={18} /></Link>
         </div>
 
         <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar mask-gradient">
